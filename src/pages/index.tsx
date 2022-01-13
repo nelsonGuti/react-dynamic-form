@@ -1,6 +1,14 @@
 import React from 'react';
-import { Button } from '@/ui';
+import { Header } from '@/custom-ui/header';
+import { FormContainer } from '@/custom-ui/form-container';
+import { Api, mockApiResponse } from '@/data/mock-api-response';
 
 export default function IndexPage(): JSX.Element {
-  return <Button>Click me</Button>;
+  const { headerTitle, screens } = mockApiResponse as Api;
+  return (
+    <div>
+      <Header title={headerTitle} />
+      <FormContainer screens={screens} />
+    </div>
+  );
 }

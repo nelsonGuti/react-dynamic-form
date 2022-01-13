@@ -58,7 +58,7 @@ export const EmployeeThumbnail: React.FunctionComponent<EmployeeThumbnailProps> 
     height={sizeInPixels}
     width={sizeInPixels}
     src={`${imageUrl}`}
-    variant={variant}
+    border-radius={variant}
   />
 );
 
