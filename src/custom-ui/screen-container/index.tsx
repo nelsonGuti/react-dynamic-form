@@ -53,7 +53,8 @@ export function ScreenContainer(props: Props): JSX.Element {
               <Field fieldId={key} label={label} hint={hint}>
                 <Input
                   fieldId={key}
-                  type={type}
+                  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                  type={type as any}
                   isRequired={required}
                   defaultValue={inputValues[key] || ''}
                   onChange={(e) => updateInput(e, key)}

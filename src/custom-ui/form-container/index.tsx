@@ -3,6 +3,7 @@ import * as React from 'react';
 import { useState } from 'react';
 import styled from 'styled-components';
 import { ScreenContainer } from '../screen-container';
+import { Screen } from '@/data/mock-api-response';
 
 interface Props {
   screens: Screen[];
@@ -24,6 +25,7 @@ export function FormContainer(props: Props): JSX.Element {
 
   function onSubmit(): void {
     // logging the form values to simulate a POST endpoint
+    // eslint-disable-next-line no-console
     console.log('Body of the POST endpoint to be hit', fieldsValues);
   }
 

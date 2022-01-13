@@ -1,7 +1,9 @@
+type InputType = 'text' | 'number' | 'checkbox';
+
 export interface Field {
   key: string;
   label: string;
-  type: string;
+  type: InputType;
   required: boolean;
   hint: string;
   options?: string[];
