@@ -22,9 +22,11 @@ export function ScreenContainer(props: Props): JSX.Element {
   const isValid = checkIfScreenIsValid();
 
   function updateInput(event: string | boolean, fieldId): void {
-    const clone = { ...inputValues };
-    clone[fieldId] = event;
-    setInputValues({ ...clone });
+    const updatedValue = { [fieldId]: event };
+    setInputValues((values) => ({
+      ...values,
+      ...updatedValue,
+    }));
   }
 
   function checkIfScreenIsValid(): boolean {
